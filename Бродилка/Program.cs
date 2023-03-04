@@ -1,4 +1,6 @@
-﻿Console.CursorVisible = false;
+﻿using System.Net.WebSockets;
+
+Console.CursorVisible = false;
 
 void DrawMap(char[,] map)
 {
@@ -156,8 +158,7 @@ while (inOpen)
     if (charKey.Key == ConsoleKey.Escape)
     {
         inOpen = false;
-        Console.WriteLine("1"); // без этой строки вывод отображается неправильно
-        Console.WriteLine("ТЫ ЛИВНУЛ С ПОЗОРОМ!!!");
+        Console.WriteLine("\nТЫ ЛИВНУЛ С ПОЗОРОМ!!!");
     }
 
     if (count == 100)
@@ -168,3 +169,5 @@ while (inOpen)
 }
 
 Console.WriteLine($"Количество набранного лута: {count}.");
+Console.WriteLine("Для выхода нажми любую клавишу.");
+Console.ReadLine();
