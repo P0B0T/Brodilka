@@ -146,24 +146,26 @@ while (inOpen)
         CheckXYLoot();
     }
 
-    Console.Clear();
     Console.ForegroundColor = ConsoleColor.Green;
 
     if (map[playerX, playerY] == '#')
     {
         inOpen = false;
+        Console.Clear();
         Console.WriteLine("\nТЫ ПРОИГРАЛ!!!");
     }
     
     if (charKey.Key == ConsoleKey.Escape)
     {
         inOpen = false;
+        Console.Clear();
         Console.WriteLine("\nТЫ ЛИВНУЛ С ПОЗОРОМ!!!");
     }
 
     if (count == 100)
     {
         inOpen = false;
+        Console.Clear();
         Console.WriteLine("\nУра, ты скипнул время, молодец!");
     }
 }
